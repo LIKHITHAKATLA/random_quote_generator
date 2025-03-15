@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM QUOTE GENERATOR</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+
+        .maindiv {
+            width: 60vw;
+            height: 250px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <h2>"The harder you work for something, the greater you'll feel when you achieve it."</h2>
+        <button>Click</button>
+    </div>
+    <script>
+
+        var quote = document.getElementsByTagName("h2")[0];
+        var button = document.getElementsByTagName("button")[0];
+
+        arr = ['“Life is really simple, but we insist on making it complicated.”' , '“You have succeeded in life when all you want is only what you need.”' , '“The journey of a thousand miles begins with one step.”' , '“Never bend your head. Always hold it high. Look the world straight in the eye.”' , '“If you are going through hell, keep going.”' , '“Life is 10% what happens to you and 90% how you react to it.” ' , '"Success is not final, failure is not fatal: it is the courage to continue that counts."' , '"Don’t watch the clock; do what it does. Keep going."' , '"The best way to predict your future is to create it."' , '"Don’t cry because it’s over, smile because it happened."']
+
+        button.addEventListener("click" , function(){
+            var randomIndex = Math.floor(Math.random() * arr.length);
+            quote.innerText = arr[randomIndex];
+
+        })
+
+
+
+    </script>
+</body>
+</html>
